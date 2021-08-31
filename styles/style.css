@@ -1,0 +1,115 @@
+:root {
+    /*Primary*/
+
+    /*Text*/
+    --veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+    /*Background gradient:*/
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    
+    /*Neutral*/
+    
+    /*Text*/
+    --veryDarkDrayishBlue: hsl(237, 12%, 33%);
+    --darkGrayishBlue: hsl(240, 6%, 50%);
+    /*Dividers*/
+    --lightGrayishBlue: hsl(240, 5%, 91%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 12px;
+    font-family: 'Kumbh Sans';
+    background-color: var(--softViolet);
+}
+
+.container {
+    display: flex;
+    max-width: 800px;
+    max-height: 400px;
+    background-color: var(--lightGrayishBlue);
+    border-radius: 20px;
+}
+
+.container__image {
+    background: url(../images/bg-pattern-desktop.svg) no-repeat;
+    background-size: 700px;
+    background-position: bottom -80px left -400px;
+}
+
+.image__principal {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image__principal img {
+    position: absolute;
+    top: 40px;
+    left: -70px;
+    width: 95%;
+}
+
+.image__secondary {
+    position: relative;
+    width: 40%;
+    top: -250px;
+    left: -110px;
+}
+
+.container__text {
+    width: 400px;
+    height: 400px;
+    margin: 30px auto;
+}
+
+.list {
+    margin-top: 15px;
+    list-style: none;
+}
+
+.item {
+    color: var(--veryDarkDrayishBlue);
+}
+
+.item :hover {
+    color: var(--softRed);
+}
+
+/*.item :active > .item__solved {
+    display: inline-block;
+}*/
+
+.item__click {
+    background-color: var(--lightGrayishBlue);
+    border-top: 0;
+    border-left: 0;
+    border-bottom: solid 1px gray;
+    border-right: 0;
+    width: 300px;
+    max-height: 100px;
+    text-align: left;
+}
+
+.item__icon {
+    position: relative;
+    float: right;
+    margin: 15px 0;
+}
+
+.item__question {
+    display: inline-block;
+    margin: 15px 0;
+}
+
+.item__solved {
+    color: var(--darkGrayishBlue);
+    margin: 0 0 15px 0;
+    display: none;
+}
+
