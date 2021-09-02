@@ -1,13 +1,38 @@
-const $listaItem = document.querySelectorAll(".item");
-let $item = null;
+const $listItem = document.querySelectorAll(".item__click");
 
-//Funcion para mostrar respuesta
-const solved = ($item) => {
+//Escuchar click por cada item
+$listItem.forEach(item => {
+    item.addEventListener("click", function(){ajustar(item)})
+})
 
-
+//Ajustar el boton seleccionado
+const ajustar = (item) => {
+    if(item.classList.contains("active")){
+        item.classList.remove("active")
+    } else {
+        remover();
+        item.classList.add("active")
+    }
 }
 
-//Funcion para encontrar el elemento activo
-const find = () => {
-
+//Remueve la clase active de todos los botones
+const remover = () => {
+    $listItem.forEach(item => {
+        item.classList.remove("active")
+    })
 }
+
+/*
+$listItem.forEach(item => {
+    item.addEventListener("click",() => {
+        if(item.classList.contains("active")){
+            item.classList.remove("active")
+        } else {
+            $listItem.forEach(item => {
+                item.classList.remove("active")
+            })
+            item.classList.add("active")
+        }
+    })
+})
+*/
