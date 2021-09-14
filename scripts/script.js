@@ -1,4 +1,7 @@
+
+
 const $listItem = document.querySelectorAll(".item__click");
+
 
 //Escuchar click por cada item
 $listItem.forEach(item => {
